@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.orange {
+  background: #f2671f;
+}
+
+.red {
+  background: #c91b26;
+}
+
+.pink {
+  background: #9c0f5f;
+}
+
+.purple {
+  background: #60047a;
+}
+
+.blue {
+  background: #160a47;
+}
+
+.docker-blue {
+  background: #066DA5;
+}

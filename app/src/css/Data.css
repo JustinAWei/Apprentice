@@ -1,0 +1,92 @@
+.data {
+  background: #f7f7f7;
+
+  min-height: 100vh;
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.data h1 {
+  color: #60047a;
+  font-weight: 400;
+  font-size: 2.25em;
+
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.data h2 {
+  color: #60047a;
+  font-weight: 400;
+  font-size: 1.75em;
+  opacity: 0.9;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.data .examples {
+  width: 100%;
+  max-width: 600px;
+}
+
+.data .examples .row {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.data .examples .example {
+  width: 49%;
+}
+
+.data .examples .column {
+  background: #fff;
+  color: #9c0f5f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1.5rem 0;
+  margin-bottom: 0;
+  padding: 1rem 0;
+
+  border-radius: 3px;
+
+  transition: 0.1s ease-in-out;
+
+  opacity: 0.8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  padding: 2rem 0;
+
+  cursor: pointer;
+}
+
+.data .examples .column:hover {
+  opacity: 1;
+  box-shadow: 0 7px 14px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.11);
+  transform: scale(1.02);
+}
+
+.data .examples .column:active {
+  transform: scale(1);
+  opacity: 0.9;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+.data .examples .column h3 {
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+.data .examples .full.column {
+  width: 100%;
+}

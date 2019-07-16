@@ -1,0 +1,32 @@
+.loading {
+  color: #fff;
+
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loading h1 {
+  font-weight: 300;
+}
+
+.loading .bars {
+  width: 750px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.loading .bars .bar {
+  width: 0.5%;
+  height: auto;
+}
+
+.loading .bars .bar img {
+  transition: 0.1s ease-in-out;
+  width: 100%;
+}
