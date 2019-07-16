@@ -24,5 +24,5 @@ def fit_model(config):
     return {
         "time": round(fit_time, 2),
         "rows": np.array(X).shape[0],
-        "size": os.path.getsize('models/model_{id}.pickle'.format(id=config['id']))
+        "size": os.path.getsize('models/model_{id}.pickle'.format(id=config['id']))/1000
     }

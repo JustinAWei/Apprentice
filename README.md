@@ -1,19 +1,47 @@
 # Apprentice: Machine Learning made Accessible
 
-Apprentice is an ambitious project which allows users to easily adapt and apply Machine Learning models to their various data sets. To run the frontend and backend for Apprentice, you will need the following tools: [scikit_learn(0.19.0)](http://scikit-learn.org/stable/), [numpy (1.11.0)](http://www.numpy.org/), [scipy](http://www.scipy.org/), [pymongo (3.5.1)](https://api.mongodb.com/python/current/), [Flask (0.12)](http://flask.pocoo.org/docs/0.12/), [Werzeug (0.12.1)](http://werkzeug.pocoo.org/docs/0.12/) and [pickle](https://docs.python.org/2/library/pickle.html).
-## Table of Contents
+Machine learning sandbox using React and Flask. Built at HackMIT 2017
 
-  1. [Frontend](#Frontend)
-  2. [Backend](#Backend)
-  3. [API](#API)
-  4. [Features under development](#Features-under-development)
-## Frontend
+![alt text](media/landing.png)
+![alt text](media/algorithm.png)
+![alt text](media/data.png)
+![alt text](media/loading.png)
+![alt text](media/lab.png)
 
-## Backend
+# Running Apprentice
 
-## API
+## 1. [Install MongoDB](https://docs.mongodb.com/v3.2/administration/install-community/)
 
-POST /upload
+### Start the mongo server
+`sudo service mongod start`
+
+### Create a db called apprentice
+```
+mongo
+> use apprentice
+> db.users.insert({})
+```
+
+## 2. Start the Flask API
+```
+cd api
+export FLASK_APP=app.py
+flask run &
+```
+
+## 3. Start the application
+```
+cd app
+npm install
+npm start
+```
+
+The application will run on `localhost:3000`
+
+# API
+
+### POST /upload
+Uploads a custom dataset
 ```python
   {
     "files":[(X, ...), (y, ...)],
@@ -21,29 +49,29 @@ POST /upload
   }
 ```
 
-POST /example
+### POST /example
+Specifies an existing example dataset
 ```python
 {
   "example": "iris"
 }
 ```
 
-POST /fit
+### POST /fit
+Fits the specified learner on the chosen datset
 ```python
   {
     "data": {
       "id": <id>,
-      "learner":["svm", {<params>}]
+      "algorithm":["svm", {<params>}]
     }
   }
 ```
 
-POST /predict
+### POST /predict
+Generates a prediction using input
 ```python
   {
     "id":<id of orig dataset>
   }
 ```
-## Features under development:
-
-* Allow users to add their own input to pre-made models 
