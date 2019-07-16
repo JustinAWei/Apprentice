@@ -1,7 +1,8 @@
 from sklearn import svm
-from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn import tree
 from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.naive_bayes import GaussianNB, MultinomialNB
+
 
 def make_learner(l, argsdict):
     if l == 'svm':

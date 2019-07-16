@@ -1,6 +1,6 @@
-from sklearn.feature_selection import VarianceThreshold
 from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import chi2
+from sklearn.feature_selection import VarianceThreshold
+
 
 def make_feature_selection(l, argsdict):
     if l == 'variancethreshold':

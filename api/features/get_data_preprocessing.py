@@ -1,6 +1,7 @@
 from make_preprocessing import make_preprocessing
 from sklearn.pipeline import Pipeline
 
+
 def get_data_preprocessing(*args):
     print(args)
     pipe_items = []

@@ -1,9 +1,10 @@
 from sklearn.datasets import load_boston
-from sklearn.datasets import load_iris
 from sklearn.datasets import load_diabetes
 from sklearn.datasets import load_digits
+from sklearn.datasets import load_iris
 
-def make_example_data(l):
+
+def make_data(l):
     if l == 'boston':
         return load_boston(return_X_y=True)
     elif l == 'iris':
